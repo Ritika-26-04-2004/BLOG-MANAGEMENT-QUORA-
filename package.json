@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node":"v22.16.0"
+  },
   "name": "restpro",
   "version": "1.0.0",
   "main": "index.js",
