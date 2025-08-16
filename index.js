@@ -36,7 +36,7 @@ app.get("/posts",(req,res) => {
 res.render("index.ejs",{posts});
 })
 app.get("/", (req,res)=>{
-    res.send("welcome!")
+    res.redirect("/posts")
 })
 
 app.get("/posts/new", (req,res)=>{
