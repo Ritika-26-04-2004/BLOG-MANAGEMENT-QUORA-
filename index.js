@@ -35,6 +35,10 @@ app.use(express.static(path.join(__dirname,"public")));
 app.get("/posts",(req,res) => {
 res.render("index.ejs",{posts});
 })
+app.get("/", (req,res)=>{
+    res.send("welcome!")
+})
+
 app.get("/posts/new", (req,res)=>{
     res.render("new.ejs")
 })
