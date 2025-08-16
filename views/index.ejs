@@ -1,0 +1,19 @@
+<h1>QUORA POSTS</h1>
+<link rel="stylesheet" href="style.css">
+<div class="posts-grid">
+  <% posts.forEach(post => { %>
+    <div class="post">
+      <h3>@<%= post.username %></h3>
+      <p><%= post.content %></p>
+      <div class="btn-group">
+        <a href="/posts/<%= post.id %>" class="btn detail-link">See details</a>
+        <a href="/posts/<%= post.id %>/edit" class="btn edit-link">Edit Post</a>
+        <form method="POST" action="/posts/<%= post.id %>?_method=DELETE">
+          <button class="btn delete-btn">Delete</button>
+        </form>
+      </div>
+    </div>
+  <% }) %>
+</div>
+
+<a href="/posts/new" class="fab">+ Create Post</a>
